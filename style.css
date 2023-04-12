@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    flex: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-image: url("https://drive.google.com/file/d/1s6TkY0lqh1VbBqs8pgkqqdhcDm5aLUZr/view?usp=share_link");
+    width: 100%;
+    background-color: rgba(0, 20, 0, 0.3);
+    padding: 1%;
+}
+
+main {
+    background-color: rgb(248, 236, 221);
+    min-height: 100px;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: auto;
+    background-color: rgb(97, 63, 66);
+    height: 200px;
+}
+
+.reservas {
+    border: 2px solid;
+    border-color: black;
+    color: white;
+    margin: 3%;
+    padding: 2%;
+    width: 30%;
+}
+
+.ubicacion {
+    color: white;
+    font-size: 75%;
+    padding: 5%;
+    width: 30%;
+}
+
+.redes-sociales {
+    color: white;
+    padding: 5%;
+    width: 30%;
+}
