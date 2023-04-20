@@ -1,46 +1,146 @@
 * {
     padding: 0;
     flex: auto;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(69, 43, 4);
 }
 
 header {
-    background-image: url("https://drive.google.com/file/d/1s6TkY0lqh1VbBqs8pgkqqdhcDm5aLUZr/view?usp=share_link");
+    background-color: rgba(224, 208, 145, 0.3);
+    background-image: url("images/principal.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
-    background-color: rgba(0, 20, 0, 0.3);
-    padding: 1%;
+    padding: 2%;
 }
 
+
+h1, h2 {
+    font-family: 'Lora', serif;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: #ffff;    
+    flex-direction: row;
+    justify-content: flex-end;
+    justify-content: space-between;
+}
+
+.links :hover {
+    color: #6d6d6b;
+  }
+
+.inicio {
+    text-align: center;
+
+}
+
+.bienvenido{
+    color: #ffff;
+}
+
+.nombre{
+    font-size: 350%;
+    color: rgb(69, 43, 4);
+    background-color:rgb(245, 229, 209, 0.6);
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.boton-reservar  {
+    background-color: rgba(164, 144, 193, 0.8);
+    padding: 1% 5%;
+    border-radius: 25px;
+    color: #ffff;
+    border: none;
+    text-decoration: none;
+    width: 40%;
+}
+
+.boton-reservar:hover  {
+    background-color: rgba(136, 104, 180, 0.8);
+}
+
+
 main {
-    background-color: rgb(248, 236, 221);
+    background-color: rgb(245, 229, 209, 0.5);
     min-height: 100px;
 }
 
-footer {
-    display: grid;
-    grid-template-columns: auto;
-    background-color: rgb(97, 63, 66);
-    height: 200px;
-}
-
-.reservas {
-    border: 2px solid;
-    border-color: black;
-    color: white;
-    margin: 3%;
+.mardel, #instalaciones, #contacto  {
+    background-color: rgba(224, 208, 145, 0.3) ;
     padding: 2%;
-    width: 30%;
 }
 
-.ubicacion {
-    color: white;
-    font-size: 75%;
-    padding: 5%;
-    width: 30%;
+
+
+.mardel {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.redes-sociales {
-    color: white;
-    padding: 5%;
-    width: 30%;
+.mardel-texto {
+    flex: 60%;
 }
+
+.mardel-img {
+    width: 40%;
+}
+
+
+.mapa {
+    padding: 2%;
+}
+
+iframe {
+    border-style: solid;
+    border-color: rgb(69, 43, 4);
+    border-width: 2px;
+}
+
+input[type=text], input[type=email], textarea, select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .boton  {
+    background-color: rgba(164, 144, 193, 0.8);
+    padding: 2% 5%;
+    border-radius: 25px;
+    color: #ffff;
+    border: none;
+    margin-left: 30%;
+    text-decoration: none;
+    width: 40%;
+}
+
+.boton:hover  {
+    background-color: rgba(136, 104, 180, 0.8);
+}
+
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(69, 43, 4);
+    padding: 1%;
+}
+
+.info-contacto, .ubicacion-y-redes{
+    color: white;
+}
+
