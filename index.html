@@ -1,73 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Borcello</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <div>
-            <img src="images/logo hotel.png" alt="Logo Hotel Borcello" width="100" height="100">
-        </div>
-        <nav>
-            <ul>
-                <ul><a href="habitaciones.html">Habitaciones</a></ul>
-                <ul><a href="instalaciones.html">Instalaciones</a></ul>
-                <ul><a href="contacto.html">Contacto</a></ul>
-            </ul>    
-        </nav>
-        <h4>BIENVENIDO AL</h4>
-        <h1>HOTEL BORCELLO</h1>
-        <a href="reservar">RESERVAR</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Quicksand&display=swap" rel="stylesheet">
 
+    <script
+      src="https://kit.fontawesome.com/330652dcb8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Hotel Borcello Homepage</title>
+  </head>
+  <body>
+
+    <header>
+      <nav>
+
+        <div class="logo">
+          <img
+            src="images/logo hotel.png"
+            alt="Logo Hotel Borcello"
+            width="100"
+            height="100"
+          />
+        </div>
+
+        <ul class="links">
+          <li><a href="#habitaciones">Habitaciones</a></li>
+          <li><a href="#instalaciones">Instalaciones</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+
+      </nav>
+      
+      <section class="inicio">
+      
+        <h5 class="bienvenido">BIENVENIDO AL</h5>
+        <h1 class="nombre">Hotel Borcello</h1>
+        <a class="boton-reservar" href="#contacto">RESERVAR</a>
+      
+      </section>  
+      
     </header>
 
     <main>
-        
-        <section>
-        </section>
 
-        <section>
-        </section>
+      <section class="promociones">
+        <h2>PROMOCIONES</h2>
+        <div class="promo-box">
+          <img class="promo-img" src="" alt="" />
+          <div class="promo-text">
+            <p>6 X 5</p>
+            <p>6 noches pagando solo por 5</p>
+          </div>
+        </div>
+      </section>
 
-        <section>
-        </section>
+      <section class="mardel">
+        <div class="mardel-texto">
+          <h2>Para difrutar de Mar del Plata</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Necessitatibus maiores, in cumque asperiores totam nobis minus eaque
+            laboriosam est doloremque. Id esse magni earum officia reiciendis
+            doloribus rem porro sunt. Facilis quos exercitationem amet tenetur,
+            sunt assumenda aliquam corrupti saepe repellendus eos tempora soluta
+            atque quia repudiandae veritatis, velit suscipit eaque asperiores
+            deserunt harum. Praesentium ipsa quam qui culpa nam?
+          </p>
+        </div>
+        <img class="mardel-img" src="images\mar-del-plata.jpg" alt="Mar del Plata" />
+      </section>
 
-        <section>
-        </section>
+      <section id="habitaciones">
+        <div class="habitaciones-texto">
+          <h2>HABITACIONES</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+            sunt? Vero doloribus quis aliquam eligendi repellendus dignissimos
+            exercitationem ducimus vel incidunt quos minus itaque reiciendis ad
+            iste dolor, culpa hic.
+          </p>
+        </div>
 
-        <section>
-        </section>
+        <div class="habitacion-1">
+          <img class="habitaciones-img" src="" alt="Suite" />
+        </div>
+        <div class="habitacion-2">
+          <img class="habitaciones-img" src="" alt="Premium" />
+          <p class="descripcion">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos,
+            ipsam. Cum, nam doloribus! Saepe consectetur itaque veritatis omnis
+            totam ipsam, magnam eligendi ipsa nobis, consequuntur repudiandae
+            dolorum animi eos nemo?
+          </p>
+        </div>
+        <div class="habitacion-3">
+          <img class="habitaciones-img" src="" alt="President" />
+          <p class="descripcion">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos,
+            ipsam. Cum, nam doloribus! Saepe consectetur itaque veritatis omnis
+            totam ipsam, magnam eligendi ipsa nobis, consequuntur repudiandae
+            dolorum animi eos nemo?
+          </p>
+        </div>
+      </section>
 
-        <section>
-        </section>
+      <section id="instalaciones">
+        <h2>INSTALACIONES</h2>
+        <div class="instalaciones-img">
+          <!-- CAROUSEL?? -->
+        </div>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+          accusamus error omnis asperiores dicta ea ratione placeat aspernatur
+          nostrum voluptates, a incidunt ducimus repellendus necessitatibus
+          animi eius. Dolores, culpa fuga!
+        </p>
+      </section>
 
+      <section class="mapa">
+        <h2>DONDE ESTAMOS</h2>
+        <div style="width: 100%">
+          <iframe
+            title="Google Maps"
+            width="100%"
+            height="500"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Bol%C3%ADvar%202118,%20mar%20del%20pata+(Mi%20nombre%20de%20egocios)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            ><a href="https://www.gps.ie/car-satnav-gps/"
+              >Hotel Borcello</a
+            ></iframe
+          >
+        </div>
+      </section>
+
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <form action="">
+          <label for="fname">Nombre completo:</label><br>
+          <input type="text" id="nombre" name="nombre"/>
+          <br><br>
+          <label for="mail">Mail:</label>
+          <input type="email" id="mail" name="mail" size="66" />
+          <br><br>
+          <label for="celular">Celular:</label>
+          <input type="text" id="celular" name="celular" size="63"/>
+          <br><br>
+          <label for="consulta">Consulta:</label><br>
+          <textarea name="consulta" id="consulta" cols="50" rows="10"></textarea>
+          <br><br>
+          <input class="boton" type="submit" value="Enviar consulta"/>
+        </form>
+      </section>
     </main>
 
     <footer>
 
-        <section class="reservas">
-            <div>
-                <h5>Reservas</h5>
-                <h6>+542223999999</h6>
-                <h6>reservas@hotelborcello.com</h6>    
-            </div>
-            </section>
+      <div class="info-contacto">
+        <h4 class="info-contacto">RESERVAS</h4>
+        <p class="info-contacto">+542223999999</p>
+        <p class="info-contacto">reservas@hotelborcello.com</p>
+      </div>
 
-        <section class="ubicacion">
-            <img src="" alt="">
-            <a href="https://goo.gl/maps/ZCjAYPEfGV25GwiZ9">Av. Peralta Ramos 1, Mar del Plata</a>
-        </section>
-
-        <section class="redes-sociales">
-            <a href="images/icono-instagram.png" title="Logo instagram">Instagram</a>
-            <a href="images/icono-facebook.png" title="Logo facebook">Facebook</a>
-        </section>
+      <div class="ubicacion-y-redes">
+        <i class="fa-solid fa-location-dot"></i>
+        <p class="info-contacto">Bolivar 2118</p>
+        <p class="info-contacto">Mar del Plata, Buenos Aires</p>
+        <a href="" title="Instagram"
+          ><i class="fa-brands fa-instagram" style="color: #000000"></i
+        ></a>
+        <a href="" title="Facebook"
+          ><i class="fa-brands fa-facebook" style="color: #000000"></i
+        ></a>
+        <a href="" title="Facebook"
+          ><i class="fa-brands fa-twitter" style="color: #000000"></i
+        ></a>
+      </div>
 
     </footer>
-    
-</body>
+  </body>
 </html>
