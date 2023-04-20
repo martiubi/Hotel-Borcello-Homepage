@@ -8,16 +8,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Quicksand&display=swap" rel="stylesheet">
-
     <script
       src="https://kit.fontawesome.com/330652dcb8.js"
       crossorigin="anonymous"
     ></script>
+
     <link rel="stylesheet" href="style.css" />
     <title>Hotel Borcello Homepage</title>
   </head>
   <body>
 
+    <header>
+      <nav>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Hotel Borcello Homepage</title>
+  </head>
+  <body>
     <header>
       <nav>
 
@@ -29,6 +35,7 @@
             height="100"
           />
         </div>
+
 
         <ul class="links">
           <li><a href="#habitaciones">Habitaciones</a></li>
@@ -49,6 +56,26 @@
     </header>
 
     <main>
+        <ul class="links">
+          <li>
+            <a href="#habitaciones" id="habitaciones">Habitaciones</a>
+          </li>
+          <li>
+            <a href="#instalaciones" id="instalaciones">Instalaciones</a>
+          </li>
+          <li>
+            <a href="#contacto" id="contacto">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="inicio">
+        <h2>BIENVENIDO AL</h2>
+        <h1>HOTEL BORCELLO</h1>
+        <a href="#contacto" id="contacto">RESERVAR</a>
+      </section>
 
       <section class="promociones">
         <h2>PROMOCIONES</h2>
@@ -60,6 +87,7 @@
           </div>
         </div>
       </section>
+
 
       <section class="mardel">
         <div class="mardel-texto">
@@ -112,6 +140,58 @@
       </section>
 
       <section id="instalaciones">
+      <section class="mardel">
+        <div class="mardel-texto">
+          <h2>Para difrutar de Mar del Plata</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Necessitatibus maiores, in cumque asperiores totam nobis minus eaque
+            laboriosam est doloremque. Id esse magni earum officia reiciendis
+            doloribus rem porro sunt. Facilis quos exercitationem amet tenetur,
+            sunt assumenda aliquam corrupti saepe repellendus eos tempora soluta
+            atque quia repudiandae veritatis, velit suscipit eaque asperiores
+            deserunt harum. Praesentium ipsa quam qui culpa nam?
+          </p>
+        </div>
+        <img class="mardel-img" src="" alt="Mar del Plata" />
+      </section>
+
+      <section class="habitaciones">
+        <div class="habitaciones-texto">
+          <h2>HABITACIONES</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+            sunt? Vero doloribus quis aliquam eligendi repellendus dignissimos
+            exercitationem ducimus vel incidunt quos minus itaque reiciendis ad
+            iste dolor, culpa hic.
+          </p>
+        </div>
+
+        <div class="habitacion-1">
+          <img class="habitaciones-img" src="" alt="Suite" />
+        </div>
+        <div class="habitacion-2">
+          <img class="habitaciones-img" src="" alt="Premium" />
+          <p class="descripcion">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos,
+            ipsam. Cum, nam doloribus! Saepe consectetur itaque veritatis omnis
+            totam ipsam, magnam eligendi ipsa nobis, consequuntur repudiandae
+            dolorum animi eos nemo?
+          </p>
+        </div>
+        <div class="habitacion-3">
+          <img class="habitaciones-img" src="" alt="President" />
+          <p class="descripcion">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos,
+            ipsam. Cum, nam doloribus! Saepe consectetur itaque veritatis omnis
+            totam ipsam, magnam eligendi ipsa nobis, consequuntur repudiandae
+            dolorum animi eos nemo?
+          </p>
+        </div>
+      </section>
+
+      <section class="instalaciones">
+
         <h2>INSTALACIONES</h2>
         <div class="instalaciones-img">
           <!-- CAROUSEL?? -->
@@ -128,9 +208,13 @@
         <h2>DONDE ESTAMOS</h2>
         <div style="width: 100%">
           <iframe
+
             title="Google Maps"
             width="100%"
             height="500"
+            width="100%"
+            height="600"
+
             frameborder="0"
             scrolling="no"
             marginheight="0"
@@ -159,11 +243,33 @@
           <textarea name="consulta" id="consulta" cols="50" rows="10"></textarea>
           <br><br>
           <input class="boton" type="submit" value="Enviar consulta"/>
+
+      <section class="contacto">
+        <h2>Contacto</h2>
+        <form action="">
+          <label for="fname">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" />
+          <label for="mail">Mail:</label>
+          <input type="text" id="mail" name="mail" />
+          <label for="celular">Celular:</label>
+          <input type="text" id="celular" name="celular" />
+          <label for="consulta">Consulta:</label>
+          <input type="text" id="consulta" name="consulta" />
+          <input type="submit" value="Enviar consulta" />
+
         </form>
       </section>
     </main>
 
     <footer>
+      <div class="info-contacto">
+        <div>
+          <p>Reservas</p>
+          <p>+542223999999</p>
+          <p>reservas@hotelborcello.com</p>
+        </div>
+      </div>
+
 
       <div class="info-contacto">
         <h4 class="info-contacto">RESERVAS</h4>
@@ -184,8 +290,24 @@
         <a href="" title="Facebook"
           ><i class="fa-brands fa-twitter" style="color: #000000"></i
         ></a>
+
+      <div class="direccion">
+        <i class="fa-solid fa-location-dot"></i>
+        <p>Bolivar 2118, Buenos Aires, Mar del Plata</p>
+
       </div>
 
+      <div class="redes-sociales">
+        <a href="" title="Instagram"
+          ><i class="fa-brands fa-instagram" style="color: #000000"></i
+        ></a>
+        <a href="" title="Facebook"
+          ><i class="fa-brands fa-facebook" style="color: #000000"></i
+        ></a>
+        <a href="" title="Facebook"
+          ><i class="fa-brands fa-twitter" style="color: #000000"></i
+        ></a>
+      </div>
     </footer>
   </body>
 </html>
