@@ -12,10 +12,24 @@
       src="https://kit.fontawesome.com/330652dcb8.js"
       crossorigin="anonymous"
     ></script>
-
     <link rel="stylesheet" href="style.css" />
-    <title>Hotel Borcello Homepage</title>
+    
+    <title>Hotel Borcello Homepage</title> 
+
+    <!– API para traer la cotizacion del dolar oficial –>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $.getJSON('https://www.dolarsi.com/api/api.php?type=dolar', function(data){
+          var cotizacion = data[0].casa.venta;
+          $('#cotizacion').html(cotizacion);
+        });
+      });
+    </script>
+
   </head>
+
 
   <body>
     <header>
@@ -38,19 +52,17 @@
         </ul>
 
       </nav>
-      
-      <section class="inicio">
+    </header>
+
+    <main>
+    
+    <section class="inicio">
       
         <h5 class="bienvenido">BIENVENIDO AL</h5>
         <h1 class="nombre">Hotel Borcello</h1>
         <a class="boton-reservar" href="#contacto">RESERVAR</a>
+      </section> 
       
-      </section>  
-
-      </nav>
-    </header>
-
-    <main>
          <section class="promociones">
         <h2>PROMOCIONES</h2>
         <div class="promo-box">
@@ -62,7 +74,7 @@
             
           </div>
         </div>
-        <br><br>
+
         <div class="promo-spellman">
           <div class="texto-spellman">
             <h3>DESCUENTO DEL 10% </h3>
@@ -122,8 +134,7 @@
         </div>
       </section>
   
-      <section class="instalaciones">
-
+      <section class="instalaciones" id="instalaciones">
         <h2>INSTALACIONES</h2>
         <div class="instalaciones-img">
           <!-- CAROUSEL?? -->
@@ -174,18 +185,10 @@
           <textarea name="consulta" id="consulta" cols="50" rows="10"></textarea>
           <br><br>
           <input class="boton" type="submit" value="Enviar consulta"/>
-      
+
     </main>
 
     <footer>
-      <div class="info-contacto">
-        <div>
-          <p>Reservas</p>
-          <p>+542223999999</p>
-          <p>reservas@hotelborcello.com</p>
-        </div>
-      </div>
-
 
       <div class="info-contacto">
         <h4 class="info-contacto">RESERVAS</h4>
@@ -193,11 +196,22 @@
         <p class="info-contacto">reservas@hotelborcello.com</p>
       </div>
 
-      <div class="ubicacion-y-redes">
-        <i class="fa-solid fa-location-dot"></i>
+      <div class="direccion">
+        <i class="fa-solid fa-location-dot" style="color: #ffff"></i>
         <p class="info-contacto">Bolivar 2118</p>
         <p class="info-contacto">Mar del Plata, Buenos Aires</p>
         <a href="https://www.instagram.com/" target="_blank" title="Instagram"
+          ><i class="fa-brands fa-instagram" style="color: #ffff"></i
+        ></a>
+        <a href="https://www.facebook.com/" target="_blank" title="Facebook"
+          ><i class="fa-brands fa-facebook" style="color: #ffff"></i
+        ></a>
+      </div>
+
+      <div class="dolar">
+        <p class="info-contacto">Cotización Dólar Oficial</p>
+        <p class="info-contacto">$ <span id="cotizacion"></span></p>
+      </div>
           ><i class="fa-brands fa-instagram" style="color: #000000"></i
         ></a>
         <a href="https://www.facebook.com/" target="_blank" title="Facebook"
@@ -211,7 +225,8 @@
         <i class="fa-solid fa-location-dot"></i>
         <p>Bolivar 2118, Buenos Aires, Mar del Plata</p>
       </div>
-      
     </footer>
+
   </body>
+
 </html>
