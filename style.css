@@ -1,138 +1,325 @@
-* {
+/* GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+/* ------ BASE ------ */
+*,
+**,
+::before,
+::after {
   padding: 0;
   margin: 0;
-  flex: auto;
-  font-family: 'Quicksand', sans-serif;
+  box-sizing: border-box;
 }
 
-header {
-  background-color: rgba(224, 208, 145, 0.3);
-  background-image: url('images/principal.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  padding: 2%;
+html {
+  scroll-behavior: smooth;
 }
 
-h1,
-h2 {
-  font-family: 'Lora', serif;
-  text-align: center;
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
+main {
+  position: relative;
+}
+
+/* ----- NABVAR ----- */
 nav {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem 0 3rem;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.links {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  color: #ffff;
+nav .logo {
+  max-width: 5rem;
+}
+
+nav .links {
+  display: flex;
   flex-direction: row;
   justify-content: flex-end;
   justify-content: space-between;
 }
 
-.links :hover {
-  color: #6d6d6b;
+.links li {
+  margin-left: 1.5rem;
+  list-style-type: none;
 }
 
+.links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.links a:hover {
+  color: #9f7dbb;
+}
+
+/* ----- INICIO ----- */
 .inicio {
+  transition: all 0.4s;
+  height: calc(100vh - 90px);
+  width: 100%;
+}
+.blur {
+  position: absolute;
+  height: 100vh;
+  margin: 0;
+  width: 100%;
+  object-fit: cover;
+}
+
+img.bg-img {
+  z-index: -999;
+  width: 100%;
+  position: relative;
+  top: -119px;
+  object-fit: cover;
+  height: 100vh;
+  filter: blur(1px) brightness(0.4);
+}
+
+.texto-inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  position: absolute;
+  top: 200px;
+  max-width: 690px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.bienvenido {
+.texto-inicio p {
+  font-size: 1.5rem;
   color: #ffff;
+  margin: 0;
+  letter-spacing: 10px;
+  margin-bottom: 20px;
 }
 
-.nombre {
-  font-size: 350%;
-  color: rgb(69, 43, 4);
-  background-color: rgb(245, 229, 209, 0.6);
-  margin-left: 20%;
-  margin-right: 20%;
+.texto-inicio h1 {
+  margin-top: 0;
+  font-size: 6rem;
+  color: #ffff;
+  margin-bottom: 15px;
+  font-family: 'EB Garamond', serif;
+  letter-spacing: 10px;
 }
 
 .boton-reservar {
   background-color: rgba(164, 144, 193, 0.8);
-  padding: 1% 5%;
-  border-radius: 25px;
+  border-radius: 10px;
   color: #ffff;
   border: none;
   text-decoration: none;
-  width: 40%;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  margin-top: 20px;
 }
 
 .boton-reservar:hover {
   background-color: rgba(136, 104, 180, 0.8);
 }
 
-main {
-  background-color: rgb(245, 229, 209, 0.5);
-  min-height: 100px;
+/* ----- PROMOCIONES ------ */
+.promociones {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 3rem;
+  text-align: center;
 }
 
-.promociones {
-  width: auto;
-  height: auto;
-  font-size: 2vw;
-  padding: 2%;
-}
 .promo-box {
   display: flex;
-  justify-content: space-between;
-}
-.promo-text {
+  justify-content: space-around;
+  align-items: center;
   text-align: right;
-  width: 60%;
+  padding-bottom: 1rem;
 }
-.promoimg {
-  width: 40%;
+
+.promo-text {
+  max-width: 50%;
 }
-.promo-spellman {
-  display: flex;
+
+.promociones h2 {
+  font-family: 'EB Garamond', serif;
+  font-size: 3rem;
+  color: #3d2314;
+  letter-spacing: 10px;
 }
-.texto-spellman {
+
+.promo-box img {
+  max-width: 50%;
+  padding-left: 1rem;
+}
+
+.promo-box .promo-left {
   text-align: left;
-  width: 60%;
 }
 
-.habitaciones-img {
-  width: 50%;
-  height: 5%;
-  border-radius: 8px;
+.promo-text h3 {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.8rem;
+  color: #3d2314;
+  letter-spacing: 10px;
 }
 
-.mardel,
-#instalaciones,
-#contacto {
-  background-color: rgba(224, 208, 145, 0.3);
-  padding: 2%;
+.promo-text p {
+  font-size: 1rem;
 }
 
+.promo-text span {
+  font-style: italic;
+  font-size: 12px;
+}
+
+/* ------ MARDEL ----- */
 .mardel {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+}
+
+.mardel-container {
+  padding: 0 1rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+}
+
+.mardel h2 {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.5rem;
+  color: #3d2314;
+  letter-spacing: 6px;
+  text-align: left;
+  margin-bottom: 1rem;
+  margin-top: 0;
 }
 
 .mardel-texto {
-  flex: 60%;
+  margin-left: 2rem;
 }
 
-.mardel-img {
-  width: 40%;
+.mardel-texto p {
+  font-size: 14px;
 }
+.mardel-img {
+  width: 50%;
+  border-radius: 8px;
+  align-self: center;
+}
+
+/* ----- HABITACIONES ----- */
+#habitaciones {
+  margin-top: 3rem;
+  padding: 0 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+#habitaciones h2 {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.7rem;
+  color: #3d2314;
+  letter-spacing: 6px;
+  text-align: left;
+  margin: 0;
+}
+
+#habitaciones p {
+  font-size: 14px;
+}
+
+.habitaciones-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hab {
+  position: relative;
+}
+
+.hab img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.hab .hab-texto {
+  z-index: 9999;
+  position: absolute;
+  text-align: left;
+  color: #ffffff;
+  font-size: 1rem;
+  left: 15px;
+  right: 15px;
+}
+
+/* ----- MUESTRA DESCRIPCION ----- */
+.hab img.descrip {
+  filter: blur(1px) brightness(0.5);
+}
+.hide {
+  display: none;
+}
+/* ------------------------ */
+
+/* ----- INSTALACIONES ----- */
+.instalaciones {
+  margin-top: 3rem;
+  padding: 0 3rem;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ----- MAPA ----- */
 
 .mapa {
-  padding: 2%;
+  margin-top: 3rem;
+  padding: 0 3rem;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 iframe {
   border-style: solid;
   border-color: rgb(69, 43, 4);
   border-width: 2px;
+}
+
+/* ----- CONTACTO ----- */
+
+.contacto {
+  margin-top: 3rem;
+  padding: 0 3rem;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 input[type='text'],
@@ -163,14 +350,65 @@ select {
   background-color: rgba(136, 104, 180, 0.8);
 }
 
+/* ----- FOOTER ----- */
 footer {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: rgb(69, 43, 4);
-  padding: 1%;
+  background-color: #5a3825;
 }
 
-.info-contacto,
-.ubicacion-y-redes {
-  color: white;
+.footer-cont {
+  margin-top: 3rem;
+  padding: 1rem 3rem;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+}
+
+.footer-cont p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.footer-cont h4 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.redes {
+  font-size: 1.7rem;
+}
+
+.redes a {
+  margin-left: 0.5rem;
+}
+
+.col-1 {
+  border: 2px solid;
+  padding: 0.5rem;
+  border-color: #ffffff;
+  border-radius: 8px;
+  max-width: 40%;
+}
+
+.direccion {
+  display: flex;
+  margin-top: 0.4rem;
+}
+
+.direccion p {
+  margin-left: 0.5rem;
+}
+
+.dolar {
+  text-align: center;
+}
+.copyright {
+  text-align: center;
+  font-size: 10px;
+  color: #ffffff;
+  margin-bottom: 0;
 }

@@ -4,136 +4,153 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/images/logo.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script
       src="https://kit.fontawesome.com/330652dcb8.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="style.css" />
-    
-    <title>Hotel Borcello Homepage</title> 
-
-    <!– API para traer la cotizacion del dolar oficial –>
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      $(document).ready(function(){
-        $.getJSON('https://www.dolarsi.com/api/api.php?type=dolar', function(data){
-          var cotizacion = data[0].casa.venta;
-          $('#cotizacion').html(cotizacion);
-        });
-      });
-    </script>
-
+    <link rel="stylesheet" href="style.css" />
+    <title>Hotel Borcello Homepage</title>
   </head>
-
 
   <body>
     <header>
       <nav>
-
         <div class="logo">
-          <img
-            src="images/logo hotel.png"
-            alt="Logo Hotel Borcello"
-            width="100"
-            height="100"
-          />
+          <img src="images\logo.png" alt="Logo Hotel Borcello" class="logo" />
         </div>
-
 
         <ul class="links">
           <li><a href="#habitaciones">Habitaciones</a></li>
           <li><a href="#instalaciones">Instalaciones</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
-
       </nav>
     </header>
 
     <main>
-    
-    <section class="inicio">
-      
-        <h5 class="bienvenido">BIENVENIDO AL</h5>
-        <h1 class="nombre">Hotel Borcello</h1>
-        <a class="boton-reservar" href="#contacto">RESERVAR</a>
-      </section> 
-      
-         <section class="promociones">
+      <section class="inicio">
+        <div class="blur">
+          <img
+            src="images\desktop-wallpaper-reception-hotel-lobby.jpg"
+            alt="Mar del Plata"
+            class="bg-img"
+          />
+        </div>
+        <div class="texto-inicio">
+          <p>BIENVENIDO AL</p>
+          <h1>Hotel Borcello</h1>
+          <a class="boton-reservar" href="#contacto">RESERVAR</a>
+        </div>
+      </section>
+
+      <section class="promociones">
         <h2>PROMOCIONES</h2>
         <div class="promo-box">
-          <img class="promo-img" src="images/calendario otoño.png" alt="calendariootoño" width="300px"/>
+          <img src="images\Schedule-rafiki.png" alt="hab-promo" width="250px" />
           <div class="promo-text">
             <h3>PROMO OTOÑO-INVIERNO</h3>
-            <p>Hace tu reserva para esta temporada otoño-invierno y disfruta de 6 noches al precio de 5.</p>
+            <p>
+              Hace tu reserva para esta temporada otoño-invierno y disfruta de 6
+              noches al precio de 5.
+            </p>
             <p>Ademas, acompañamos tus mañanas con desayuno incluido.</p>
-            
           </div>
         </div>
 
-        <div class="promo-spellman">
-          <div class="texto-spellman">
-            <h3>DESCUENTO DEL 10% </h3>
-          <p>Para aquellos clientes que abonen con su tarjeta de debito o credito del Banco Spellman,  tendran un 10% de descuento en el total de su compra. </p>
-          <p>*promo sujeta hasta agotar el stock de 1000 descuentos o hasta la fecha 30 de Junio del 2023 a las 23:59, lo que suceda primero.</p>
-          </div>     
-
-          <img src="images/descuento.png" alt="imgdescuento" width="100px">
-          
+        <div class="promo-box">
+          <div class="promo-text promo-left">
+            <h3>DESCUENTO DEL 10%</h3>
+            <p>
+              Para aquellos clientes que abonen con su tarjeta de debito o
+              credito del Banco Spellman, tendran un 10% de descuento en el
+              total de su compra.
+            </p>
+            <span> *promo sujeta hasta agotar el stock. </span>
+          </div>
+          <img
+            src="images\Discount-pana.png"
+            alt="imgdescuento"
+            width="300px"
+          />
         </div>
-      
       </section>
 
       <section class="mardel">
-        <div class="mardel-texto">
-          <h2>Para difrutar de Mar del Plata</h2>
-          <p>
-            Mar del Plata es una ciudad costera de Argentina que ofrece muchas atracciones para los visitantes. Se puede disfrutar de sus playas, su gastronomía, su cultura y su historia. Mar del Plata tiene un clima templado y una belleza natural que la convierten en un destino ideal para relajarse y divertirse. Además, cuenta con una amplia oferta de alojamientos, servicios y actividades para todos los gustos y presupuestos. Algunas de las actividades que se pueden hacer en Mar del Plata son:
-          <li>Visitar el Museo del Mar, donde se exhiben más de 30.000 conchas marinas y otros objetos relacionados con el mundo marino.</li>
-          <li>Recorrer la Rambla, un paseo peatonal que bordea el mar y que cuenta con monumentos, esculturas y edificios emblemáticos como el Casino Central y el Hotel Provincial.</li>
-          <li>Practicar deportes acuáticos como surf, windsurf, kitesurf o kayak en las diferentes playas de la ciudad, como La Perla, Varese o Punta Mogotes.</li>
-          <li>Conocer la historia y la arquitectura de la ciudad a través de sus museos, iglesias, teatros y casas de estilo colonial, modernista o neogótico.</li>
-          </p>
+        <div class="mardel-container">
+          <img
+            class="mardel-img"
+            src="images\mar-del-plata.jpg"
+            alt="Mar del Plata"
+          />
+          <div class="mardel-texto">
+            <h2>Para difrutar de Mar del Plata</h2>
+            <p>
+              Mar del Plata es una ciudad costera de Argentina que ofrece muchas
+              atracciones para los visitantes. Se puede disfrutar de sus playas,
+              su gastronomía, su cultura y su historia. Mar del Plata tiene una
+              belleza natural que la convierten en un destino ideal para
+              relajarse y divertirse.
+            </p>
+          </div>
         </div>
-        <img class="mardel-img" src="images\mar-del-plata.jpg" alt="Mar del Plata" />
       </section>
 
       <section id="habitaciones">
         <div class="habitaciones-texto">
           <h2>HABITACIONES</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
-            sunt? Vero doloribus quis aliquam eligendi repellendus dignissimos
-            exercitationem ducimus vel incidunt quos minus itaque reiciendis ad
-            iste dolor, culpa hic.
+            Las habitaciones en Hotel Borcello son cómodas y espaciosas,
+            equipadas con todas las comodidades modernas para hacer de su
+            estancia una experiencia inolvidable.
           </p>
         </div>
 
-        <div class="habitacion-1">
-          <img class="habitaciones-img" src="images/habitacion1.jpg" alt="Suite" />
-        </div>
-        <p>
-          La habitación suite de nuestro hotel ofrece una experiencia única de alojamiento. Incluye servicios exclusivos y personalizados, como acceso a un lounge privado, desayuno continental, minibar gratuito, wifi de alta velocidad y servicio de habitaciones las 24 horas. Esta habitación es ideal para viajeros que buscan privacidad, comodidad y lujo en su estancia.
-        </p>
-        
-        <div class="habitacion-2">
-          <img class="habitaciones-img" src="images/habitacion4.jpg" alt="Premium" />
-          <p class="descripcion">
-            La habitación Premium de nuestro hotel le ofrece una experiencia de lujo y confort. Cuenta con una cama matrimonial, un baño privado con jacuzzi, una sala de estar con sofá y televisión, y un balcón con vistas al mar. Disfrute de los servicios exclusivos que le brindamos, como el acceso al spa, el desayuno continental y el wifi gratuito. Reserve su habitación premium hoy y viva una estancia inolvidable.
+        <div class="hab habitacion-1">
+          <p class="hab-texto hide">
+            La habitación President ofrece una cama king size, un sofá, un
+            televisor de pantalla plana, un minibar y una cafetera. Posee
+            servicios exclusivos como desayuno libre, caja fuerte, aire
+            acondicionado, servicio a la habitación las 24 horas y acceso al
+            salón ejecutivo del hotel.
           </p>
+          <img
+            class="habitaciones-img"
+            src="images/habitacion1.jpg"
+            alt="Suite"
+          />
         </div>
-        <div class="habitacion-3">
-          <img class="habitaciones-img" src="images/habitacion2.jpg" alt="President" />
-          <p class="descripcion">
-            Le ofrecemos una habitación president con amplio espacio, una cama king size, un sofá, un escritorio, un televisor de pantalla plana, un minibar y una cafetera. El cuarto de baño es privado y cuenta con una bañera, una regadera, un jacuzzi, un secador de pelo y un set de amenidades que incluye gel de baño, champú, gorro de baño, esponja para limpieza del calzado, set de afeitado, set dentífrico, pañuelos de papel y agua de colonia. Además, le ofrecemos servicios adicionales como desayuno libre, acceso a internet inalámbrico de alta velocidad, caja fuerte, aire acondicionado, servicio a la habitación las 24 horas y acceso al salón ejecutivo del hotel
+
+        <div class="hab habitacion-2">
+          <p class="hab-texto hide">
+            La habitación suite ofrece una experiencia única de alojamiento.
+            Incluye servicios exclusivos y personalizados, como acceso a un
+            lounge privado, desayuno continental, minibar gratuito, wifi de alta
+            velocidad y servicio de habitaciones las 24 horas.
           </p>
+          <img
+            class="habitaciones-img"
+            src="images/habitacion4.jpg"
+            alt="Premium"
+          />
+        </div>
+        <div class="hab habitacion-3">
+          <p class="hab-texto hide">
+            La habitación Premium le ofrece una experiencia de lujo y confort.
+            Cuenta con una cama matrimonial, un baño privado con jacuzzi, una
+            sala de estar con sofá y televisión, y un balcón con vistas al mar.
+          </p>
+          <img
+            class="habitaciones-img"
+            src="images/habitacion2.jpg"
+            alt="President"
+          />
         </div>
       </section>
-  
+
       <section class="instalaciones" id="instalaciones">
         <h2>INSTALACIONES</h2>
         <div class="instalaciones-img">
@@ -151,13 +168,11 @@
         <h2>DONDE ESTAMOS</h2>
         <div style="width: 100%">
           <iframe
-
             title="Google Maps"
             width="100%"
             height="500"
             width="100%"
             height="600"
-
             frameborder="0"
             scrolling="no"
             marginheight="0"
@@ -165,68 +180,70 @@
             src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Bol%C3%ADvar%202118,%20mar%20del%20pata+(Mi%20nombre%20de%20egocios)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             ><a href="https://www.gps.ie/car-satnav-gps/"
               >Hotel Borcello</a
-          ></iframe>
+            ></iframe
+          >
         </div>
       </section>
 
-      <section id="contacto">
+      <section class="contacto" id="contacto">
         <h2>Contacto</h2>
         <form action="">
-          <label for="fname">Nombre completo:</label><br>
-          <input type="text" id="nombre" name="nombre"/>
-          <br><br>
+          <label for="fname">Nombre completo:</label><br />
+          <input type="text" id="nombre" name="nombre" />
+          <br /><br />
           <label for="mail">Mail:</label>
           <input type="email" id="mail" name="mail" size="66" />
-          <br><br>
+          <br /><br />
           <label for="celular">Celular:</label>
-          <input type="text" id="celular" name="celular" size="63"/>
-          <br><br>
-          <label for="consulta">Consulta:</label><br>
-          <textarea name="consulta" id="consulta" cols="50" rows="10"></textarea>
-          <br><br>
-          <input class="boton" type="submit" value="Enviar consulta"/>
-
+          <input type="text" id="celular" name="celular" size="63" />
+          <br /><br />
+          <label for="consulta">Consulta:</label><br />
+          <textarea
+            name="consulta"
+            id="consulta"
+            cols="50"
+            rows="10"
+          ></textarea>
+          <br /><br />
+          <input class="boton" type="submit" value="Enviar consulta" />
+        </form>
+      </section>
     </main>
 
     <footer>
-
-      <div class="info-contacto">
-        <h4 class="info-contacto">RESERVAS</h4>
-        <p class="info-contacto">+542223999999</p>
-        <p class="info-contacto">reservas@hotelborcello.com</p>
+      <div class="footer-cont">
+        <div class="col-1">
+          <div class="info-contacto">
+            <h4>RESERVAS</h4>
+            <p>+542223999999</p>
+            <p>reservas@hotelborcello.com</p>
+          </div>
+          <div class="direccion">
+            <i class="fa-solid fa-location-dot" style="color: #ffff"></i>
+            <p>Bolivar 2118, Mar del Plata, Buenos Aires</p>
+          </div>
+        </div>
+        <div class="dolar">
+          <h4>Cotización Dólar Oficial</h4>
+          <p>$ <span id="cotizacion"></span></p>
+        </div>
+        <div class="col-3">
+          <div class="redes">
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              title="Instagram"
+              ><i class="fa-brands fa-instagram" style="color: #ffff"></i
+            ></a>
+            <a href="https://www.facebook.com/" target="_blank" title="Facebook"
+              ><i class="fa-brands fa-facebook" style="color: #ffff"></i
+            ></a>
+          </div>
+        </div>
       </div>
-
-      <div class="direccion">
-        <i class="fa-solid fa-location-dot" style="color: #ffff"></i>
-        <p class="info-contacto">Bolivar 2118</p>
-        <p class="info-contacto">Mar del Plata, Buenos Aires</p>
-        <a href="https://www.instagram.com/" target="_blank" title="Instagram"
-          ><i class="fa-brands fa-instagram" style="color: #ffff"></i
-        ></a>
-        <a href="https://www.facebook.com/" target="_blank" title="Facebook"
-          ><i class="fa-brands fa-facebook" style="color: #ffff"></i
-        ></a>
-      </div>
-
-      <div class="dolar">
-        <p class="info-contacto">Cotización Dólar Oficial</p>
-        <p class="info-contacto">$ <span id="cotizacion"></span></p>
-      </div>
-          ><i class="fa-brands fa-instagram" style="color: #000000"></i
-        ></a>
-        <a href="https://www.facebook.com/" target="_blank" title="Facebook"
-          ><i class="fa-brands fa-facebook" style="color: #000000"></i
-        ></a>
-        <a href="https://twitter.com/" target="_blank" title="Twitter"
-          ><i class="fa-brands fa-twitter" style="color: #000000"></i
-        ></a>
-
-      <div class="direccion">
-        <i class="fa-solid fa-location-dot"></i>
-        <p>Bolivar 2118, Buenos Aires, Mar del Plata</p>
-      </div>
+      <p class="copyright">© Hotel Borcello - Codo a Codo 2023</p>
     </footer>
 
+    <script src="app.js"></script>
   </body>
-
 </html>
