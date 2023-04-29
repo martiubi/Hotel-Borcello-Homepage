@@ -188,6 +188,7 @@ img.bg-img {
 
 /* ------ MARDEL ----- */
 .mardel {
+  padding: 0 1rem;
   max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
@@ -204,7 +205,7 @@ img.bg-img {
 
 .mardel h2 {
   font-family: 'EB Garamond', serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #3d2314;
   letter-spacing: 6px;
   text-align: left;
@@ -214,17 +215,44 @@ img.bg-img {
 
 .mardel-texto {
   margin-left: 2rem;
+  width: 60%;
 }
 
 .mardel-texto p {
   font-size: 14px;
 }
 .mardel-img {
-  width: 50%;
-  border-radius: 8px;
+  width: 100%;
   align-self: center;
+  overflow: hidden;
 }
 
+.mardel ul{
+  display: flex;
+  padding: 0;
+  width: 500%;
+  animation: cambio 20s infinite;
+}
+.mardel li{
+  width: 100%;
+  list-style: none;
+}
+.mardel img{
+  width: 100%;
+  border-radius: 8px;
+}
+@keyframes cambio{
+  0%{margin-left: 0;}
+  15%{margin-left: 0;}
+  20%{margin-left: -100%;}
+  35%{margin-left: -100%;}
+  40%{margin-left: -200%;}
+  55%{margin-left: -200%;}
+  60%{margin-left: -300%;}
+  75%{margin-left:-300%;}
+  80%{margin-left: -400%;}
+  100%{margin-left: -400%;}
+}
 /* ----- HABITACIONES ----- */
 #habitaciones {
   margin-top: 3rem;
