@@ -13,6 +13,7 @@
     ></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>  
     <title>Hotel Borcello Homepage</title>
   </head>
 
@@ -28,6 +29,22 @@
           <li><a href="#instalaciones">Instalaciones</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
+
+         <!-- Boton para ir arriba al hacer scroll -->
+        <button id="btn-arriba">
+          <i class="fas fa-sort-up"></i>
+        </button>
+        <script>
+          window.onscroll = function() {
+            mostrarBotonArriba();
+          };
+          document.getElementById("btn-arriba").addEventListener("click", function() {
+  subirPagina();
+});
+
+
+        </script>
+
       </nav>
     </header>
 
@@ -156,22 +173,30 @@
           />
         </div>
       </section>
+      
+      <section class="instalaciones">
 
-      <section class="instalaciones" id="instalaciones">
-        <h2>INSTALACIONES</h2>
-        <div class="instalaciones-img">
-          <!-- CAROUSEL?? -->
+        <div class="inst-texto">
+          <h2>NUESTRAS INSTALACIONES</h2>
+          <p>Contamos con áreas de relax y trabajo para que su estadía sea única.</p>
+          <p>- Piscina al aire libre</p> 
+          <p>- Restaurant abierto todo el día</p>
+          <p>- Gimnasio completo</p>
+          <p>- Salones para reunirse o trabajar</p>
+          <p>- Acceso libre a wifi en todo el hotel</p>
         </div>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
-          accusamus error omnis asperiores dicta ea ratione placeat aspernatur
-          nostrum voluptates, a incidunt ducimus repellendus necessitatibus
-          animi eius. Dolores, culpa fuga
-        </p>
+
+        <div class="inst inst-1">
+          <img
+            class="inst-img"
+            src="images/piscina.jpg"
+            alt="Piscina"
+          />
+        </div>
       </section>
 
-      <section class="mapa">
-        <h2>DONDE ESTAMOS</h2>
+      <section class="mapa" id="mapa">
+        <h2>DONDE ESTAMOS</h2><br>
         <div style="width: 100%">
           <iframe
             title="Google Maps"
@@ -192,7 +217,7 @@
       </section>
 
       <section class="contacto" id="contacto">
-        <h2>Contacto</h2>
+        <h2>Contacto</h2><br>
         <form action="">
           <label for="fname">Nombre completo:</label><br />
           <input type="text" id="nombre" name="nombre" />
@@ -220,7 +245,7 @@
       <div class="footer-cont">
         <div class="col-1">
           <div class="info-contacto">
-            <h4>RESERVAS</h4>
+            <h4>RESERVAS</h4><br>
             <p>+542223999999</p>
             <p>reservas@hotelborcello.com</p>
           </div>

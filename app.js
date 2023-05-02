@@ -23,3 +23,23 @@ hab.forEach((h) => {
     habImg.classList.remove('descrip');
   });
 });
+
+
+// BOTON PARA VOLVER ARRIBA AL HACER SCROLL ABAJO
+
+
+function mostrarBotonArriba() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("btn-arriba").style.display = "block";
+  } else {
+    document.getElementById("btn-arriba").style.display = "none";
+  }
+}
+
+
+// DESPLAZAR PAGINA HACIA ARRIBA CUANDO SE HACE CLICK EN BOTON
+
+function subirPagina() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
