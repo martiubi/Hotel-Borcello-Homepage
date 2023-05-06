@@ -43,3 +43,34 @@ function subirPagina() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+
+// VALIDACION DEL FORMULARIO DE CONSULTAS
+
+function validarForm() {
+ 
+  // Obtener los valores de los campos del formulario
+  var nombre = document.forms["formConsultas"]["nombre"].value;
+  var mail = document.forms["formConsultas"]["mail"].value;
+  var celular = document.forms["formConsultas"]["celular"].value;
+  var consulta = document.forms["formConsultas"]["consulta"].value;
+
+  // Verificar que los campos estén completos
+  if (nombre == "" || mail == "" || celular == "" || consulta == "") {
+    swal("Error","Por favor, complete todos los campos","error");
+    return false;
+  }
+
+  // Verificar que el correo electrónico sea válido
+  var expReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!expReg.test(mail)) {
+    swal("Error","Por favor, ingrese un correo electrónico válido","error");
+    return false;
+  }
+
+  swal("Gracias", "Su consulta será respondida en las próximas horas","success");
+  setTimeout(10000);
+  
+  // Devolver true para enviar el formulario
+  return true;
+}

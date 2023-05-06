@@ -12,8 +12,9 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Hotel Borcello Homepage</title>
   </head>
 
@@ -218,7 +219,7 @@
 
       <section class="contacto" id="contacto">
         <h2>Contacto</h2><br>
-        <form action="">
+        <form id="formConsultas" onsubmit="return validarForm()" >
           <label for="fname">Nombre completo:</label><br />
           <input type="text" id="nombre" name="nombre" />
           <br /><br />
