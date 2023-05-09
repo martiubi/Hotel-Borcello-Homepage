@@ -14,7 +14,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <title>Hotel Borcello Homepage</title>
   </head>
 
@@ -25,27 +28,21 @@
           <img src="images\logo.png" alt="Logo Hotel Borcello" class="logo" />
         </div>
 
+        <i class="fa-solid fa-bars navbar-toggle" style="color: #ffffff"></i>
+
         <ul class="links">
+          <i class="fa-solid fa-x navbar-x" style="color: #3d2314"></i>
+          <li><a href="#promociones">Promociones</a></li>
           <li><a href="#habitaciones">Habitaciones</a></li>
           <li><a href="#instalaciones">Instalaciones</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
 
-         <!-- Boton para ir arriba al hacer scroll -->
-        <button id="btn-arriba">
-          <i class="fas fa-sort-up"></i>
-        </button>
-        <script>
-          window.onscroll = function() {
-            mostrarBotonArriba();
-          };
-          document.getElementById("btn-arriba").addEventListener("click", function() {
-  subirPagina();
-});
-
-
-        </script>
-
+        <i
+          class="fa-solid fa-circle-up fa-beat"
+          style="color: #3d2314"
+          id="btn-arriba"
+        ></i>
       </nav>
     </header>
 
@@ -65,7 +62,7 @@
         </div>
       </section>
 
-      <section class="promociones">
+      <section class="promociones" id="promociones">
         <h2>PROMOCIONES</h2>
         <div class="promo-box">
           <img src="images\Schedule-rafiki.png" alt="hab-promo" width="250px" />
@@ -101,15 +98,14 @@
         <div class="mardel-container">
           <div class="mardel-img">
             <ul>
-              <li><img src="images/mar-del-plata.jpg" alt=""></li>
-              <li><img src="images/museo-mardel.jpg" alt=""></li>
-              <li><img src="images/playa-mardel.jpg" alt=""></li>
-              <li><img src="images/gastronomia-mardel.jpg" alt=""></li>
-              <li><img src="images/monumento-mardel.jpg" alt=""></li>
-           </ul>
-
+              <li><img src="images/mar-del-plata.jpg" alt="" /></li>
+              <li><img src="images/museo-mardel.jpg" alt="" /></li>
+              <li><img src="images/playa-mardel.jpg" alt="" /></li>
+              <li><img src="images/gastronomia-mardel.jpg" alt="" /></li>
+              <li><img src="images/monumento-mardel.jpg" alt="" /></li>
+            </ul>
           </div>
-    
+
           <div class="mardel-texto">
             <h2>Para difrutar de Mar del Plata</h2>
             <p>
@@ -174,30 +170,42 @@
           />
         </div>
       </section>
-      
-      <section class="instalaciones">
 
+      <section class="instalaciones" id="instalaciones">
         <div class="inst-texto">
           <h2>NUESTRAS INSTALACIONES</h2>
-          <p>Contamos con áreas de relax y trabajo para que su estadía sea única.</p>
-          <p>- Piscina al aire libre</p> 
-          <p>- Restaurant abierto todo el día</p>
-          <p>- Gimnasio completo</p>
-          <p>- Salones para reunirse o trabajar</p>
-          <p>- Acceso libre a wifi en todo el hotel</p>
+          <p>
+            Contamos con áreas de relax y trabajo para que su estadía sea única.
+          </p>
         </div>
 
-        <div class="inst inst-1">
-          <img
-            class="inst-img"
-            src="images/piscina.jpg"
-            alt="Piscina"
-          />
+        <div class="gallery">
+          <div class="gallery-item">
+            <img class="inst-img" src="images/piscina.jpg" alt="Piscina" />
+            <p>Piscina al aire libre</p>
+          </div>
+          <div class="gallery-item">
+            <img class="inst-img" src="images/gym.jpg" alt="Gimnasio" />
+            <p>Gimnasio completo</p>
+          </div>
+          <div class="gallery-item">
+            <img
+              class="inst-img"
+              src="images/restaurant.jpg"
+              alt="Restaurant"
+            />
+            <p>Restaurant abierto todo el dia</p>
+          </div>
+          <div class="gallery-item">
+            <img class="inst-img" src="images\salon.jpg" alt="Salon" />
+            <p>Salon para reunirse o trabajar</p>
+          </div>
         </div>
       </section>
 
       <section class="mapa" id="mapa">
-        <h2>DONDE ESTAMOS</h2><br>
+        <h2>DONDE ESTAMOS</h2>
+        <br />
         <div style="width: 100%">
           <iframe
             title="Google Maps"
@@ -218,26 +226,32 @@
       </section>
 
       <section class="contacto" id="contacto">
-        <h2>Contacto</h2><br>
-        <form id="formConsultas" onsubmit="return validarForm()" >
-          <label for="fname">Nombre completo:</label><br />
+        <h2>CONTACTO</h2>
+        <br />
+        <form
+          action="mailto:martinaubilla@icloud.com"
+          method="get"
+          id="formConsultas"
+          onsubmit="return validarForm()"
+        >
+          <label for="fname">Nombre completo:</label>
           <input type="text" id="nombre" name="nombre" />
-          <br /><br />
+          <br />
           <label for="mail">Mail:</label>
           <input type="email" id="mail" name="mail" size="66" />
-          <br /><br />
+          <br />
           <label for="celular">Celular:</label>
           <input type="text" id="celular" name="celular" size="63" />
-          <br /><br />
-          <label for="consulta">Consulta:</label><br />
+          <br />
+          <label for="consulta">Consulta:</label>
           <textarea
             name="consulta"
             id="consulta"
             cols="50"
             rows="10"
           ></textarea>
-          <br /><br />
-          <input class="boton" type="submit" value="Enviar consulta" />
+          <br />
+          <input class="boton" type="submit" value="ENVIAR CONSULTA" />
         </form>
       </section>
     </main>
@@ -246,7 +260,7 @@
       <div class="footer-cont">
         <div class="col-1">
           <div class="info-contacto">
-            <h4>RESERVAS</h4><br>
+            <h4>RESERVAS:</h4>
             <p>+542223999999</p>
             <p>reservas@hotelborcello.com</p>
           </div>
